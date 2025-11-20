@@ -1,0 +1,390 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4088433261151143847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7633670141550964565}
+  - component: {fileID: 3389045387325327339}
+  - component: {fileID: 1107746831452425062}
+  - component: {fileID: 2943933397521626556}
+  - component: {fileID: 2489724436959246947}
+  m_Layer: 0
+  m_Name: Action
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7633670141550964565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6433481994838436642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3389045387325327339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85eaa62eb7e7448a8f06b2d74041c33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RinaInput::RinaInput.Controller.ControllerMonoBehaviour
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 8098aec7ee4eb41f48b7576d490c517f, type: 2}
+    - {fileID: 11400000, guid: 009a236263ab94a6f83cd191c51b99ed, type: 2}
+    - {fileID: 11400000, guid: f3260688ecdcd4ba3b3beda68c560a93, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: m_buttonModules
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[RinaInput.Controller.Module.IInputModule`1[[System.Single,
+        mscorlib]], RinaInput]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_leverModules
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[RinaInput.Controller.Module.IInputModule`1[[UnityEngine.Vector2,
+        UnityEngine.CoreModule]], RinaInput]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_commands
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[RinaInput.Controller.Command.IInputCommand,
+        RinaInput]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_streamProvider
+      Entry: 6
+      Data: 
+--- !u!114 &1107746831452425062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518047a011644561a52d23131080ecaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Action.MoveAction
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: f3260688ecdcd4ba3b3beda68c560a93, type: 2}
+    - {fileID: 11400000, guid: 009a236263ab94a6f83cd191c51b99ed, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _playable
+      Entry: 6
+      Data: 
+    - Name: _input
+      Entry: 10
+      Data: 0
+    - Name: _sprintInput
+      Entry: 10
+      Data: 1
+  _animator: {fileID: 0}
+  _rigidbody: {fileID: 0}
+  _maxMoveSpeed: 6
+  _moveSpeed: 3
+  _airResistance: 3
+  _sprintRatio: 2
+  _currentDirection: {x: 0, y: 0}
+  _isSprint: 0
+--- !u!114 &2943933397521626556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b87cb6c762ff4c76baf2106d27e48642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Action.NormalJumpAction
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 8098aec7ee4eb41f48b7576d490c517f, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _playable
+      Entry: 6
+      Data: 
+    - Name: _input
+      Entry: 10
+      Data: 0
+    - Name: _grounded
+      Entry: 6
+      Data: 
+  _animator: {fileID: 0}
+  _rigidbody: {fileID: 0}
+  _baseForce: 5
+  _holdJumpForce: 30
+  _maxHoldTime: 0.5
+  _isJumping: 0
+  _isHolding: 0
+  _holdCounter: 0
+--- !u!114 &2489724436959246947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1663a901c2e420da48568e4f3df1672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Action.CarbyJumpAction
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 8098aec7ee4eb41f48b7576d490c517f, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _playable
+      Entry: 6
+      Data: 
+    - Name: _input
+      Entry: 10
+      Data: 0
+    - Name: _grounded
+      Entry: 6
+      Data: 
+  _animator: {fileID: 0}
+  _rigidbody: {fileID: 0}
+  _baseForce: 5
+  _holdJumpForce: 30
+  _maxHoldTime: 0.5
+  _isJumping: 0
+  _isHolding: 0
+  _holdCounter: 0
+--- !u!1001 &5957013716934528277
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 198293666791796923, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_Name
+      value: Player_Bear_Custom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7633670141550964565}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 374921699157359396}
+    - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4722075544159968174}
+    - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5689618601596256792}
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+--- !u!4 &6433481994838436642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+  m_PrefabInstance: {fileID: 5957013716934528277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7548728396707907730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+  m_PrefabInstance: {fileID: 5957013716934528277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &374921699157359396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548728396707907730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abbfa042f9e4d4d985c804ec05ccdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.PlayerLifetimeScope
+  parentReference:
+    TypeName: Scr.GameManager.GameManagerLifetimeScope
+  autoRun: 1
+  autoInjectGameObjects:
+  - {fileID: 4088433261151143847}
+  m_list: {fileID: 4722075544159968174}
+--- !u!114 &4722075544159968174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548728396707907730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab939daa46c4dd686197714cf4e957b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RinaSymbol::RinaSymbol.InstallerList
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: m_installers
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[VContainer.Unity.IInstaller, VContainer]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &5689618601596256792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548728396707907730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a73fcd51744973a7c45f12b1973c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.GroundedManager
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _serializedGrounded: 0
+  _checkOffset: 0.1
+  _checkRadius: 0.4
+  _checkDistance: 0.3

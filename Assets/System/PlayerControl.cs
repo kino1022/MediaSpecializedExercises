@@ -37,6 +37,13 @@ public class PlayerControl : MonoBehaviour
     private float groundCheckOffsetY;
     //　レイの衝突情報格納
     private RaycastHit hit;
+    
+    [SerializeField]
+    private float sprintSpeed = 2.0f;
+
+    private float sprintSpeedForce = 1.0f;
+
+    private float defaultSprintSpeedForce;
 
     //プレイヤー入力の格納変数
     private InputAction moveInput;
@@ -45,8 +52,8 @@ public class PlayerControl : MonoBehaviour
     private Vector2 inputMoveAxis;
 
     //Startよりも前に1回だけ実行される
-    void Awake()
-    {
+    void Awake() {
+        defaultSprintSpeedForce = sprintSpeedForce;
         //接地チェック用レイの距離の計算
         groundCheckDistance = groundCheckRadius / 2;
         //接地チェック用レイの開始地点調整用変数の計算
@@ -78,13 +85,32 @@ public class PlayerControl : MonoBehaviour
         //空中は地面の摩擦がなくなるので、移動速度を3分の1にする
         if (!isGrounded) movement /= 3;
         //プレイヤーの最大速度の計算、速度が上がるにつれてspeedLimitは0になる
-        float speedLimit = moveSpeedMax - Mathf.Abs(rb.linearVelocity.x);
-        //移動速度をリジッドボディにAddForceに反映、speedLimitを乗算して最大速度を制限
-        rb.AddForce(movement * moveSpeed * speedLimit, ForceMode.Force);
+        float speedLimit = moveSpeedMax * sprintSpeedForce - Mathf.Abs(rb.linearVelocity.x);
+        
+        if (speedLimit < 0) speedLimit = 0;
+        
+        //移動速度をリジッドボディにAddForceに反映、speedLimitを乗算して最大速度を制限¥¥
+        rb.AddForce(movement * moveSpeed * speedLimit * sprintSpeedForce, ForceMode.Force);
         //ジャンプフラグがTrueの時、ジャンプ処理
         if(doJump){
-            
+            if (playable && isGrounded)
+            {
+                //リジッドボディに上方向の力を加える
+                rb.AddForce(Vector3.up * initialJumpForce, ForceMode.Impulse);
+                isHoldingJump = true;
+                holdTime = 0f;
+            }
             doJump = false;
+
+        }
+        
+        if (isHoldingJump && holdTime < maxHoldTime)
+        {
+            float forcePerFrame = holdJumpForce * Time.fixedDeltaTime;
+                
+            rb.AddForce(Vector3.up * forcePerFrame, ForceMode.Acceleration);
+                
+            holdTime += Time.fixedDeltaTime;
         }
 
         //リジッドボディの速度の取得、アニメーション制御用
@@ -116,17 +142,17 @@ public class PlayerControl : MonoBehaviour
     //ジャンプボタンを離したときの処理
     private void OnJumpReleased(InputAction.CallbackContext context)
     {
-        
+        isHoldingJump = false;
     }
     //Bダッシュボタン処理
     private void OnSprintStarted(InputAction.CallbackContext context)
     {
-        
+        sprintSpeedForce = sprintSpeed;
     }
     //Bダッシュボタン離した処理
     private void OnSprintReleased(InputAction.CallbackContext context)
     {
-        
+        sprintSpeedForce = defaultSprintSpeedForce;
     }
     //接地チェック
     bool checkGrounded()
