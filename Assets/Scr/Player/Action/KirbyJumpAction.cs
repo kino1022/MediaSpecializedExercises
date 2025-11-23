@@ -6,7 +6,7 @@
     using UnityEngine.InputSystem;
 
     namespace Scr.Player.Action {
-        public class CarbyJumpAction : JumpActionBehaviour {
+        public class KirbyJumpAction : JumpActionBehaviour {
         
             [SerializeField]
             [LabelText("基本ジャンプ力")]

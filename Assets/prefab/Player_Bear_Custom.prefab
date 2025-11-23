@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7633670141550964565}
   - component: {fileID: 3389045387325327339}
+  - component: {fileID: 6480883210004276084}
   - component: {fileID: 1107746831452425062}
   - component: {fileID: 2943933397521626556}
   - component: {fileID: 2489724436959246947}
+  - component: {fileID: 5690162796261232905}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -110,6 +112,27 @@ MonoBehaviour:
     - Name: m_streamProvider
       Entry: 6
       Data: 
+--- !u!114 &6480883210004276084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d29c226742416cb2de5949a028b64a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Action.ActionInstaller
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!114 &1107746831452425062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +173,7 @@ MonoBehaviour:
   _sprintRatio: 2
   _currentDirection: {x: 0, y: 0}
   _isSprint: 0
+  _isEnable: 1
 --- !u!114 &2943933397521626556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4088433261151143847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1663a901c2e420da48568e4f3df1672, type: 3}
   m_Name: 
@@ -228,6 +252,38 @@ MonoBehaviour:
   _isJumping: 0
   _isHolding: 0
   _holdCounter: 0
+--- !u!114 &5690162796261232905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088433261151143847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6fde73a62e46e8826b4cb04bec78f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Action.ShootFireAction
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 8098aec7ee4eb41f48b7576d490c517f, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _playable
+      Entry: 6
+      Data: 
+    - Name: _input
+      Entry: 10
+      Data: 0
+  _animator: {fileID: 0}
+  _rigidbody: {fileID: 0}
+  _shootItem: {fileID: 196352, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
+  _shootPoint: {fileID: 8476977164138366935}
 --- !u!1001 &5957013716934528277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.272
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -344,7 +400,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 6480883210004276084}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -356,6 +413,9 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
       Data: 0
     - Name: 
       Entry: 13
@@ -388,3 +448,8 @@ MonoBehaviour:
   _checkOffset: 0.1
   _checkRadius: 0.4
   _checkDistance: 0.3
+--- !u!1 &8476977164138366935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2814703281158474434, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+  m_PrefabInstance: {fileID: 5957013716934528277}
+  m_PrefabAsset: {fileID: 0}

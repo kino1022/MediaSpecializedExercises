@@ -8,6 +8,8 @@ namespace Scr.FireBall {
         [SerializeField]
         private Vector3 _movePower = Vector3.zero;
 
+        [SerializeField]
+        [LabelText("最大高度")]
         private float _maxHeight = 1.0f;
         
         private Rigidbody _rigidbody;

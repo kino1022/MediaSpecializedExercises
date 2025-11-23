@@ -7,6 +7,16 @@ using UnityEngine.InputSystem;
 using VContainer;
 
 namespace Scr.Player.Action {
+    
+    public interface IMoveAction : IPlayerAction {
+        
+        bool IsEnable { get; }
+        
+        void SetEnable (bool enable);
+    }
+    
+    //追加:移動処理を別コンポーネントに分離
+    
     public class MoveAction : PlayerActionBehaviour {
         
         //本当なら移動量管理クラスを制作して、ダッシュとわけて設計するべきだが過剰設計になると判断し断念。
@@ -48,6 +58,10 @@ namespace Scr.Player.Action {
         [LabelText("ダッシュ入力")]
         private bool _isSprint = false;
         
+        [SerializeField]
+        [LabelText("有効フラグ")]
+        private bool _isEnable = true;
+        
         private IGroundedManger _grounded;
 
         protected override void OnPreStart() {
@@ -62,6 +76,8 @@ namespace Scr.Player.Action {
         }
 
         private void FixedUpdate() {
+
+            if (_isEnable is false) return;
             
             var movement = new Vector3(_currentDirection.x, 0.0f, 0.0f);
 
@@ -117,10 +133,10 @@ namespace Scr.Player.Action {
                     if (_playable.Playable is false) return;
 
                     if (x.Phase is InputActionPhase.Performed) {
-                        _isSprint = true;
+                        _isSprint = false;
                     }
                     else {
-                        _isSprint = false;
+                        _isSprint = true;
                     }
                 })
                 .AddTo(this);
@@ -139,6 +155,10 @@ namespace Scr.Player.Action {
             
             if (Mathf.Abs(rbVelocity) > 3.0f && rbVelocity * _currentDirection.x < 0) _animator.SetBool("recoil", true);
             else _animator.SetBool("recoil", false);
+        }
+
+        public void SetEnable(bool enable) {
+            _isEnable = enable;
         }
 
     }

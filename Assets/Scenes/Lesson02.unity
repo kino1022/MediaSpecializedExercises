@@ -119,32 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &139090017 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 196352, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
-  m_PrefabInstance: {fileID: 3494680085176549067}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &139090023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139090017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63aa9483de7d48a6a82448cee3390332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Scr.FireBall.FireBallController
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
 --- !u!1 &991998533
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,17 +534,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4924364627805787285, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
-      propertyPath: m_Material
+    - target: {fileID: 4430914363932151897, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
+      propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 13400000, guid: 036b8ca7968bf4b77a79bfbfba34aacf, type: 2}
+      objectReference: {fileID: 4430914363932151897, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 196352, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 139090023}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
