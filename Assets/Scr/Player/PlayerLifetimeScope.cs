@@ -39,6 +39,14 @@ namespace Scr.Player {
                 .Register<IPlayableManager, PlayableManager>(Lifetime.Singleton)
                 .As<IPlayableProvider>();
 
+            var power = gameObject.GetComponentFromWhole<IPowerMeterManager>();
+
+            if (power is not null) {
+                builder
+                    .RegisterComponent(power)
+                    .As<IPowerMeterManager>();
+            }
+
         }
     }
 }

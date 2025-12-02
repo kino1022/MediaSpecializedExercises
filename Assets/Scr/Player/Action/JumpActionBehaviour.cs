@@ -57,7 +57,5 @@ namespace Scr.Player.Action {
         /// </summary>
         /// <param name="signal"></param>
         protected virtual void OnReleased (InputSignal<float> signal) {}
-
-        public abstract void ExecuteJump();
     }
 }

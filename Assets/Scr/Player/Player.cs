@@ -38,9 +38,6 @@ namespace Scr.Player {
                 if (point.y <= 0) {
                     _damagePublisher.Publish(new TakeDamageEventBus(_trampleDamage, other.gameObject));
                     var jump = GetComponentsInChildren<JumpActionBehaviour>();
-                    foreach (var jumpAction in jump) {
-                        jumpAction.ExecuteJump();
-                    }
                 }
             }
         }

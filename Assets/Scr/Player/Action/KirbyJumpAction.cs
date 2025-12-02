@@ -72,9 +72,5 @@
 
                 _isJumping = false;
             }
-            
-            public override void ExecuteJump() {
-                _isJumping = true;
-            }
         }
     }

@@ -13,11 +13,13 @@ namespace Scr.Player.Action {
         bool IsEnable { get; }
         
         void SetEnable (bool enable);
+        
+        bool IsSprint { get; }
     }
     
     //追加:移動処理を別コンポーネントに分離
     
-    public class MoveAction : PlayerActionBehaviour {
+    public class MoveAction : PlayerActionBehaviour, IMoveAction {
         
         //本当なら移動量管理クラスを制作して、ダッシュとわけて設計するべきだが過剰設計になると判断し断念。
         //ぶっちゃけ再利用効かないし面倒臭いや
@@ -63,6 +65,9 @@ namespace Scr.Player.Action {
         private bool _isEnable = true;
         
         private IGroundedManger _grounded;
+
+        public bool IsEnable  => _isEnable;
+        public bool IsSprint => _isSprint;
 
         protected override void OnPreStart() {
             base.OnPreStart();
