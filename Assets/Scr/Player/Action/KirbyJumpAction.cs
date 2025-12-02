@@ -11,6 +11,10 @@
             [SerializeField]
             [LabelText("基本ジャンプ力")]
             private float _baseForce = 5.0f;
+            
+            [SerializeField]
+            [LabelText("空中時の倍率")]
+            private float _onAirRatio = 0.3f;
         
             [SerializeField]
             [LabelText("最大ジャンプ力")]
@@ -36,18 +40,21 @@
             private float _holdCounter = 0.0f;
 
             private void FixedUpdate() {
+                
                 if (_isJumping && _playable.Playable) {
-                    _rigidbody.AddForce(Vector3.up * _baseForce, ForceMode.Impulse);
+                    var force = _grounded.IsGrounded ? _baseForce : _baseForce * _onAirRatio;
+                    _rigidbody.AddForce(Vector3.up * force, ForceMode.Impulse);
                     _isHolding = true;
                     _holdCounter = 0.0f;
                     _isJumping = false;
                 }
-            
+                /*
                 if (_isHolding && _holdCounter < _maxHoldTime) {
                     float perforce = _holdJumpForce * Time.fixedDeltaTime;
                     _rigidbody.AddForce(Vector3.up * perforce, ForceMode.Acceleration);
                     _holdCounter += Time.fixedDeltaTime;
                 }
+                */
             }
 
             protected override void OnPressed(InputSignal<float> signal) {
@@ -64,6 +71,10 @@
                 if (_playable.Playable is false) return;
 
                 _isJumping = false;
+            }
+            
+            public override void ExecuteJump() {
+                _isJumping = true;
             }
         }
     }

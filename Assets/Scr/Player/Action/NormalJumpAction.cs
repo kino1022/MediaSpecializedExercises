@@ -65,5 +65,9 @@ namespace Scr.Player.Action {
 
             _isJumping = false;
         }
+
+        public override void ExecuteJump() {
+            _isJumping = true;
+        }
     }
 }

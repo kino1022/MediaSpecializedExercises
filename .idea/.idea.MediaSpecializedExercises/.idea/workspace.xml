@@ -5,26 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9873e4e3-8843-45ac-94df-8763c15cdf16" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ActionInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ActionInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ArtherJumpAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ArtherJumpAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/Enemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/Enemy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/EnemyLifetimeScope.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/EnemyLifetimeScope.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Player.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/System/PlayerControl_Assignment01.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/System/PlayerControl_Assignment01.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PhysicsMat/FireBallPhysics.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PhysicsMat/FireBallPhysics.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lesson02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lesson02.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/CarbyJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/KirbyJumpAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/CarbyJumpAction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/KirbyJumpAction.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/MoveAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/MoveAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/ArtherJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ArtherJumpAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/KirbyJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/KirbyJumpAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/NormalJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/NormalJumpAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/PlayerActionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/PlayerActionBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/Base/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Base/FireBall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/Player_Bear_Custom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Player_Bear_Custom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Player_bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Player_bear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +46,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/EnemyLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,9 +61,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/GroundedManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayableManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/GetComponentFromWhole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/System/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/System/PlayerControl_Assignment01.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/System/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@8c70d0b94b30/Runtime/ContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@8c70d0b94b30/Runtime/IObjectResolverExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -75,26 +88,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Device#class com.jetbrains.rider.plugins.unity.run.devices.UnityEditorDeviceKind#com.jetbrains.rider.plugins.unity.run.devices.UnityDevicesProvider#Unity のアタッチ先: アタッチ先": "Unity エディター",
-    "DeviceKind#com.jetbrains.rider.plugins.unity.run.devices.UnityDevicesProvider": "Unity エディター",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Unity のアタッチ先.アタッチ先.executor": "Debug",
-    "XThreadsFramesViewSplitterKey": "0.68118465",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Device#class com.jetbrains.rider.plugins.unity.run.devices.UnityEditorDeviceKind#com.jetbrains.rider.plugins.unity.run.devices.UnityDevicesProvider#Unity のアタッチ先: アタッチ先&quot;: &quot;Unity エディター&quot;,
+    &quot;DeviceKind#com.jetbrains.rider.plugins.unity.run.devices.UnityDevicesProvider&quot;: &quot;Unity エディター&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Unity のアタッチ先.アタッチ先.executor&quot;: &quot;Debug&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.68118465&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity のアタッチ先.アタッチ先">
     <configuration name="ユニットテスト (バッチモード)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.2.7f2/Unity.app/Contents/MacOS/Unity" />
@@ -160,6 +173,9 @@
       <workItem from="1762995599902" duration="4418000" />
       <workItem from="1763564827399" duration="5773000" />
       <workItem from="1763595748699" duration="13300000" />
+      <workItem from="1764129512807" duration="411000" />
+      <workItem from="1764162286478" duration="992000" />
+      <workItem from="1764208065437" duration="5293000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 using R3;
 using RinaInput.Controller.Module;
+using Scr.FireBall;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace Scr.Player.Action {
 
         [SerializeField]
         [LabelText("発射するオブジェクト")]
-        private GameObject _shootItem;
+        private FireBallController _shootItem;
 
         [SerializeField]
         [LabelText("発射ポイント")]
@@ -29,7 +30,9 @@ namespace Scr.Player.Action {
             _input
                 .Stream
                 .Subscribe(_ => {
-                    Instantiate(_shootItem, _shootPoint.transform.position, _shootPoint.transform.rotation);
+                    _animator.Play("Bear_ throw");
+                    var fire = Instantiate(_shootItem, _shootPoint.transform.position, _shootPoint.transform.rotation);
+                    fire.SetMovement(transform.localScale.x);
                 })
                 .AddTo(this);
         }

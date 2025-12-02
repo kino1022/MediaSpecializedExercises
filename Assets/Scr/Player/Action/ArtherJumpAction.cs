@@ -24,6 +24,10 @@ namespace Scr.Player.Action {
             
             _moveAction.SetEnable(false);
         }
-        
+
+
+        public override void ExecuteJump() {
+            throw new System.NotImplementedException();
+        }
     }
 }

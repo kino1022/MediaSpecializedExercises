@@ -13,6 +13,9 @@ namespace Scr.Player.Action {
         
     }
     
+    /// <summary>
+    /// 全てのプレイヤーアクションの基底クラス
+    /// </summary>
     public abstract class PlayerActionBehaviour : SerializedMonoBehaviour {
 
         protected ReactiveProperty<bool> _onAction = new(false);
