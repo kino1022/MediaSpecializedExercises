@@ -36,10 +36,10 @@ namespace Scr.Player.Action {
             _input
                 .Stream
                 .Subscribe(x => {
-                    if (x.Phase is InputActionPhase.Started) {
+                    if (x.Phase is not InputActionPhase.Canceled) {
                         OnPressed(x);
                     }
-                    else if (x.Phase is InputActionPhase.Canceled) {
+                    else {
                         OnReleased(x);
                     }
                 })

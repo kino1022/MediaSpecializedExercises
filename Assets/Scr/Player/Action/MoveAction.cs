@@ -137,11 +137,11 @@ namespace Scr.Player.Action {
                     
                     if (_playable.Playable is false) return;
 
-                    if (x.Phase is InputActionPhase.Performed) {
-                        _isSprint = false;
+                    if (x.Phase is not InputActionPhase.Canceled) {
+                        _isSprint = true;
                     }
                     else {
-                        _isSprint = true;
+                        _isSprint = false;
                     }
                 })
                 .AddTo(this);

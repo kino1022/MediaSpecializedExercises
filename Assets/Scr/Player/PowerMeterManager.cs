@@ -63,13 +63,16 @@ namespace Scr.Player {
                 //走っていて
                 _moveAction.IsSprint &&
                 //既に増加タスクが走っていないなら
-                _isIncreaseProcess
+                !_isIncreaseProcess
                 ) {
                 //増加タスクを走らせる
                 IncreasePowerInSprint().Forget();
             }
+            
             //それ以外の場合で現象処理が走っていないなら
-            else if (_isDecreaseProcess) {
+            if (
+                !_grounded.IsGrounded &&
+                !_isDecreaseProcess) {
                 //減少処理を走らせる
                 DecreasePower().Forget();
             }
@@ -113,7 +116,9 @@ namespace Scr.Player {
                     }
 
                     //方向が一致して居た場合はパワーを増やす
-                    _power++;
+                    if (_power < 100) {
+                        _power++;
+                    }
                 }
             }
             catch (OperationCanceledException) {
@@ -127,10 +132,13 @@ namespace Scr.Player {
         private async UniTask DecreasePower() {
             _isDecreaseProcess = true;
             try {
-                while (_moveAction.IsSprint && !this.GetCancellationTokenOnDestroy().IsCancellationRequested) {
+                while (!_moveAction.IsSprint && !this.GetCancellationTokenOnDestroy().IsCancellationRequested) {
                     await UniTask.Delay(TimeSpan.FromSeconds(_decreaseInterval));
-                    _power--;
+                    if (_power > 0) {
+                        _power--;
+                    }
                 }
+                _isDecreaseProcess = false;
             }
             catch (OperationCanceledException) {
                 

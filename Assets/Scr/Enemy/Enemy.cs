@@ -1,5 +1,6 @@
 using System;
 using MessagePipe;
+using R3;
 using Scr.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -24,11 +25,21 @@ namespace Scr.Enemy {
         }
 
         private void Start() {
-            _damageSubscriber = _resolver.Resolve<ISubscriber<TakeDamageEventBus>>();
-            _damageSubscription = _damageSubscriber.Subscribe(OnTakeDamage);
+            
+            _damageSubscriber = 
+                _resolver
+                    .Resolve<ISubscriber<TakeDamageEventBus>>();
+            
+            _damageSubscription =
+                _damageSubscriber
+                    .Subscribe(OnTakeDamage)
+                    .AddTo(this);
+            
         }
 
         private void OnTakeDamage(TakeDamageEventBus bus) {
+
+            Debug.Log("いてぇよ");
 
             if (!bus.Target.transform.IsChildOf(transform)) {
                 return;
@@ -36,7 +47,7 @@ namespace Scr.Enemy {
             
             _enemyHealth -= bus.Damage;
 
-            if (_enemyHealth < 0) {
+            if (_enemyHealth <= 0) {
                 Destroy(gameObject);
             }
         }

@@ -1,12 +1,18 @@
 ﻿using RinaInput.Signal;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using VContainer;
 
 namespace Scr.Player.Action {
     public class TailMarioJumpAction : JumpActionBehaviour {
+        
         [SerializeField]
         [LabelText("基本ジャンプ力")]
         private float _baseForce = 5.0f;
+
+        [SerializeField] 
+        [LabelText("空中ジャンプ時の倍率")]
+        private float _onAirJumpRatio = 0.3f;
         
         [SerializeField]
         [LabelText("最大ジャンプ力")]
@@ -33,30 +39,49 @@ namespace Scr.Player.Action {
         [LabelText("ホールド時間カウンター")]
         [ReadOnly]
         private float _holdCounter = 0.0f;
-        
+
+        private IPowerMeterManager _power;
+
+        protected override void OnPreStart() {
+            base.OnPreStart();
+            _power = _resolver.Resolve<IPowerMeterManager>();
+        }
+
 
         private void FixedUpdate() {
 
             //初回ジャンプの処理
-            if (!_isJumping && _playable.Playable && _grounded.IsGrounded) {
+            if (
+                //ジャンプフラグが立っており
+                _isJumping && 
+                //かつ、操作可能フラグが立っており
+                _playable.Playable &&
+                //接地しているなら
+                _grounded.IsGrounded) {
+                
                 _rigidbody.AddForce(Vector3.up * _baseForce, ForceMode.Impulse);
-                _isHolding = true;
-                _holdCounter = 0.0f;
-                _isJumping = false;
             }
-            
-            //長押しで飛距離を上げる処理関連
-            if (_isHolding && _holdCounter < _maxHoldTime) {
-                float perforce = _holdJumpForce * Time.fixedDeltaTime;
-                _rigidbody.AddForce(Vector3.up * perforce, ForceMode.Acceleration);
-                _holdCounter += Time.fixedDeltaTime;
+
+            //押されていて操作可能かつ、Pゲージが残っているなら
+            if (_isJumping && _playable.Playable && _power.Power < 0) {
+                //少し上昇させうr
+                _rigidbody.AddForce(Vector3.up * _baseForce, ForceMode.Acceleration);
             }
-            
-            //着地してなくて長押しされている場合の処理
-            if (_isHolding && _playable.Playable && !_grounded.IsGrounded) {
-                var previousVelocity = _rigidbody.linearVelocity;
-                _rigidbody.linearVelocity = new Vector3(previousVelocity.x, previousVelocity.y * _airResistance, previousVelocity.z);
+
+            //下降していて、ジャンプボタンが押されているなら
+            if (_rigidbody.linearVelocity.y < 0 && _isJumping) {
+                _rigidbody.linearVelocity = new Vector3(
+                    _rigidbody.linearVelocity.x,
+                    //ベクトルに対して抵抗をかける
+                    _rigidbody.linearVelocity.y * _airResistance,
+                    _rigidbody.linearVelocity.z);
             }
+        }
+
+        private void Update() {
+            //update内で飛んでいる際のアニメーション呼び出し
+            _animator.SetBool("jump", !_grounded.IsGrounded);
+            _animator.SetBool("fly", !_grounded.IsGrounded);
         }
 
         protected override void OnPressed(InputSignal<float> signal) {
@@ -73,6 +98,8 @@ namespace Scr.Player.Action {
             if (_playable.Playable is false) return;
 
             _isJumping = false;
+            
+            _isHolding = false;
         }
 
     }

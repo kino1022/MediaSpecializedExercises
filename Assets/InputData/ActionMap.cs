@@ -118,6 +118,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Tail"",
+                    ""type"": ""Button"",
+                    ""id"": ""c020ee45-40db-4a1a-8ff0-3d17fc39622b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -219,6 +228,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a4bc193-d0ed-496f-8cd7-8fa621cb6d8c"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Tail"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -230,6 +250,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_DefaultActions_Move = m_DefaultActions.FindAction("Move", throwIfNotFound: true);
         m_DefaultActions_Jump = m_DefaultActions.FindAction("Jump", throwIfNotFound: true);
         m_DefaultActions_Sprint = m_DefaultActions.FindAction("Sprint", throwIfNotFound: true);
+        m_DefaultActions_Tail = m_DefaultActions.FindAction("Tail", throwIfNotFound: true);
     }
 
     ~@ActionMap()
@@ -313,6 +334,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_DefaultActions_Move;
     private readonly InputAction m_DefaultActions_Jump;
     private readonly InputAction m_DefaultActions_Sprint;
+    private readonly InputAction m_DefaultActions_Tail;
     /// <summary>
     /// Provides access to input actions defined in input action map "DefaultActions".
     /// </summary>
@@ -336,6 +358,10 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "DefaultActions/Sprint".
         /// </summary>
         public InputAction @Sprint => m_Wrapper.m_DefaultActions_Sprint;
+        /// <summary>
+        /// Provides access to the underlying input action "DefaultActions/Tail".
+        /// </summary>
+        public InputAction @Tail => m_Wrapper.m_DefaultActions_Tail;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -371,6 +397,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
+            @Tail.started += instance.OnTail;
+            @Tail.performed += instance.OnTail;
+            @Tail.canceled += instance.OnTail;
         }
 
         /// <summary>
@@ -391,6 +420,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
+            @Tail.started -= instance.OnTail;
+            @Tail.performed -= instance.OnTail;
+            @Tail.canceled -= instance.OnTail;
         }
 
         /// <summary>
@@ -452,5 +484,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSprint(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Tail" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTail(InputAction.CallbackContext context);
     }
 }
