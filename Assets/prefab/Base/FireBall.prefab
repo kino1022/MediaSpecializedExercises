@@ -4912,7 +4912,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _movePower: {x: 1, y: 0, z: 0}
+  _movePower: {x: 3, y: 0, z: 0}
   _maxHeight: 1
 --- !u!114 &878424061436470091
 MonoBehaviour:

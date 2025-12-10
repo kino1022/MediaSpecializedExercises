@@ -1,5 +1,6 @@
 using R3;
 using RinaInput.Controller.Module;
+using Scr.Audio;
 using Scr.FireBall;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -20,6 +21,10 @@ namespace Scr.Player.Action {
         [LabelText("発射ポイント")]
         private GameObject _shootPoint;
         
+        [SerializeField]
+        [LabelText("射撃音")]
+        private AudioClip _fireAudioClip;
+        
         protected override void OnPostStart() {
             base.OnPostStart();
             
@@ -31,8 +36,11 @@ namespace Scr.Player.Action {
                 .Stream
                 .Subscribe(_ => {
                     _animator.Play("Bear_ throw");
+                    if (_fireAudioClip is not null) {
+                        _audioPublisher.Publish(new AudioPlayEventBus(new AudioPlayContext(1), _fireAudioClip, gameObject));
+                    }
                     var fire = Instantiate(_shootItem, _shootPoint.transform.position, _shootPoint.transform.rotation);
-                    fire.SetMovement(transform.localScale.x);
+                    fire.SetMovement(transform.root.localScale.x);
                 })
                 .AddTo(this);
         }

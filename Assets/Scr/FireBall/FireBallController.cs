@@ -22,8 +22,6 @@ namespace Scr.FireBall {
 
         private void Start() {
             _rigidbody = gameObject.GetComponentFromWhole<Rigidbody>();
-            
-            _rigidbody.AddForce(_movePower, ForceMode.Impulse);
 
             //以下禁術
             var manager = GameObject.FindAnyObjectByType(typeof(GameManagerLifetimeScope));
@@ -53,6 +51,7 @@ namespace Scr.FireBall {
         private void OnCollisionEnter(Collision collision) {
             if (collision.gameObject.layer == 7) {
                 _publisher.Publish(new TakeDamageEventBus(1, collision.gameObject));
+                Destroy(gameObject);
             }
         }
     }

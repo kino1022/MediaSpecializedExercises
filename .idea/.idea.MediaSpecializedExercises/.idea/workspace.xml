@@ -5,17 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9873e4e3-8843-45ac-94df-8763c15cdf16" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/TailAttackAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/TailAttackAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Audio/AudioPlayEventBus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Audio/AudioPlayEventBus.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Audio/AudioPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Audio/AudioPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/EnemyMoveController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/EnemyMoveController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/FrontChecker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/FrontChecker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/AEnemyBehaviourState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/AEnemyBehaviourState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/AStateTransitionTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/AStateTransitionTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituMoveBehaviourState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituMoveBehaviourState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituThrowBehaviourState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituThrowBehaviourState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/TimeTransitionTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/TimeTransitionTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStateMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStateMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStatePattern.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStatePattern.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/REFACTORING_SUMMARY.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputData/ActionMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputData/ActionMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputData/ActionMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputData/ActionMap.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/MoveAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/MoveAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/TailMarioJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/TailMarioJumpAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Enemy/EnemyLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/EnemyLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/NormalJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/NormalJumpAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/PlayerActionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/PlayerActionBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/ShootFireAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/PlayerLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/PlayerLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Base/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Base/FireBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Enemy_Dack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Enemy_Dack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Player_Bear_Custom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Player_Bear_Custom.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +56,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/InputData/ActionMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Audio/AudioPlayEventBus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Audio/AudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/EnemyLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/EnemyMoveController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/FrontChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/AEnemyBehaviourState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/AStateTransitionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituMoveBehaviourState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituThrowBehaviourState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/TimeTransitionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStatePattern.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,7 +133,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -167,7 +207,12 @@
       <workItem from="1764208065437" duration="5293000" />
       <workItem from="1764676867797" duration="2730000" />
       <workItem from="1764691136656" duration="2168000" />
-      <workItem from="1764751388578" duration="6358000" />
+      <workItem from="1764751388578" duration="19069000" />
+      <workItem from="1765286746998" duration="4098000" />
+      <workItem from="1765321974011" duration="5000" />
+      <workItem from="1765348966127" duration="2419000" />
+      <workItem from="1765352291202" duration="787000" />
+      <workItem from="1765359045020" duration="266000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,6 @@
+using MessagePipe;
 using R3;
+using Scr.Audio;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -35,6 +37,8 @@ namespace Scr.Player.Action {
         [LabelText("操作可能フラグ")]
         [ReadOnly]
         protected IPlayableProvider _playable;
+        
+        protected IPublisher<AudioPlayEventBus> _audioPublisher;
 
         protected IObjectResolver _resolver;
         
@@ -53,6 +57,8 @@ namespace Scr.Player.Action {
             _rigidbody = _resolver.Resolve<Rigidbody>();
             
             _playable = _resolver.Resolve<IPlayableProvider>();
+            
+            _audioPublisher = _resolver.Resolve<IPublisher<AudioPlayEventBus>>();
 
             OnPostStart();
         }

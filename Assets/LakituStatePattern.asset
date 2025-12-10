@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86d6dd2feba477daa58183f981c78d7, type: 3}
+  m_Name: LakituStatePattern
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Enemy.State.EnemyStatePattern
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1493818680923039525, guid: 2de55e7f52d8e41fbb0ff6414a9ab9f0, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: StatePatternEntries
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Scr.Enemy.State.EnemyStatePatternEntry,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Scr.Enemy.State.EnemyStatePatternEntry, Assembly-CSharp
+    - Name: StateId
+      Entry: 1
+      Data: "\u79FB\u52D5"
+    - Name: State
+      Entry: 7
+      Data: 2|Scr.Enemy.State.Asset.LakituMoveBehaviourState, Assembly-CSharp
+    - Name: nextStateId
+      Entry: 6
+      Data: 
+    - Name: stateEnd
+      Entry: 5
+      Data: false
+    - Name: _target
+      Entry: 10
+      Data: 0
+    - Name: _heightFromTarget
+      Entry: 4
+      Data: 5
+    - Name: _smoothTime
+      Entry: 4
+      Data: 0.5
+    - Name: _maxSpeed
+      Entry: 4
+      Data: 15
+    - Name: _bobbingAmount
+      Entry: 4
+      Data: 0.5
+    - Name: _bobbingSpeed
+      Entry: 4
+      Data: 0.2
+    - Name: _lookAtTarget
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: TransitionTriggers
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Scr.Enemy.State.IStateTransitionTrigger,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|Scr.Enemy.State.Asset.TimeTransitionTrigger, Assembly-CSharp
+    - Name: nextStateId
+      Entry: 1
+      Data: "\u6295\u4E0B"
+    - Name: _timeElapsed
+      Entry: 4
+      Data: 3
+    - Name: _isElapsed
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Scr.Enemy.State.EnemyStatePatternEntry, Assembly-CSharp
+    - Name: StateId
+      Entry: 1
+      Data: "\u6295\u4E0B"
+    - Name: State
+      Entry: 7
+      Data: 6|Scr.Enemy.State.Asset.LakituThrowBehaviourState, Assembly-CSharp
+    - Name: nextStateId
+      Entry: 1
+      Data: "\u79FB\u52D5"
+    - Name: stateEnd
+      Entry: 5
+      Data: true
+    - Name: _target
+      Entry: 10
+      Data: 0
+    - Name: _throwForce
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 5
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _throwPoint
+      Entry: 10
+      Data: 1
+    - Name: _throwPrefab
+      Entry: 10
+      Data: 2
+    - Name: _towardsPlayer
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: TransitionTriggers
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[Scr.Enemy.State.IStateTransitionTrigger,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  StatePatternEntries:
+  - StateId: "\u79FB\u52D5"
+  - StateId: "\u6295\u4E0B"

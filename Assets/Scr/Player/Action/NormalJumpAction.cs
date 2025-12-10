@@ -1,5 +1,6 @@
 using System;
 using RinaInput.Signal;
+using Scr.Audio;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -34,9 +35,24 @@ namespace Scr.Player.Action {
         [ReadOnly]
         private float _holdCounter = 0.0f;
         
+        [SerializeField]
+        [LabelText("ジャンプ時の音声クリップ")]
+        private AudioClip _jumpAudioClip;
+        
 
         private void FixedUpdate() {
             if (_isJumping && _playable.Playable && _grounded.IsGrounded) {
+
+                if (_jumpAudioClip is not null) {
+                    _audioPublisher.Publish(
+                        new AudioPlayEventBus(
+                            new AudioPlayContext(1), 
+                            _jumpAudioClip, 
+                            gameObject
+                            )
+                    );
+                }
+                
                 _rigidbody.AddForce(Vector3.up * _baseForce, ForceMode.Impulse);
                 _isHolding = true;
                 _holdCounter = 0.0f;

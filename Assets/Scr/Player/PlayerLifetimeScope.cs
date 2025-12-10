@@ -47,6 +47,14 @@ namespace Scr.Player {
                     .As<IPowerMeterManager>();
             }
 
+            
+            var audioSource = gameObject.GetComponentFromWhole<AudioSource>();
+
+            if (audioSource is not null) {
+                builder
+                    .RegisterComponent(audioSource)
+                    .As<AudioSource>();
+            }
         }
     }
 }

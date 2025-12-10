@@ -7,6 +7,8 @@ using UnityEngine;
 using VContainer;
 
 namespace Scr.Enemy {
+    
+    
     public class Enemy : SerializedMonoBehaviour {
 
         [SerializeField]

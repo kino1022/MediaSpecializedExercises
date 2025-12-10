@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6480883210004276084}
   - component: {fileID: 1107746831452425062}
   - component: {fileID: 2943933397521626556}
-  - component: {fileID: 2489724436959246947}
   - component: {fileID: 5690162796261232905}
   m_Layer: 6
   m_Name: Action
@@ -213,46 +212,6 @@ MonoBehaviour:
   _isJumping: 0
   _isHolding: 0
   _holdCounter: 0
---- !u!114 &2489724436959246947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4088433261151143847}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1663a901c2e420da48568e4f3df1672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Action.CarbyJumpAction
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 8098aec7ee4eb41f48b7576d490c517f, type: 2}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: _playable
-      Entry: 6
-      Data: 
-    - Name: _input
-      Entry: 10
-      Data: 0
-    - Name: _grounded
-      Entry: 6
-      Data: 
-  _animator: {fileID: 0}
-  _rigidbody: {fileID: 0}
-  _baseForce: 5
-  _onAirRatio: 0.3
-  _holdJumpForce: 30
-  _maxHoldTime: 0.5
-  _isJumping: 0
-  _isHolding: 0
-  _holdCounter: 0
 --- !u!114 &5690162796261232905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4088433261151143847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec6fde73a62e46e8826b4cb04bec78f9, type: 3}
   m_Name: 
@@ -449,7 +408,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 198293666791796923, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
@@ -465,6 +425,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5689618601596256792}
+    - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7411114495629593921}
+    - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4046711719616950534}
+    - targetCorrespondingSourceObject: {fileID: 4209150493574743431, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8526590336691808562}
   m_SourcePrefab: {fileID: 100100000, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
 --- !u!4 &6433481994838436642 stripped
 Transform:
@@ -493,6 +462,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 4088433261151143847}
+  - {fileID: 7548728396707907730}
   m_list: {fileID: 4722075544159968174}
 --- !u!114 &4722075544159968174
 MonoBehaviour:
@@ -557,6 +527,147 @@ MonoBehaviour:
   _checkOffset: 0.1
   _checkRadius: 0.4
   _checkDistance: 0.3
+--- !u!114 &7411114495629593921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548728396707907730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1b2a3e883541098491c790e59fd59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Player.Player
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _trampleOffeSet: 0.2
+  _trampleDamage: 1
+--- !u!82 &4046711719616950534
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548728396707907730}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8526590336691808562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548728396707907730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44eaf688665e432289f49ece04dbbf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.Audio.AudioPlayer
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &8476977164138366935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2814703281158474434, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
