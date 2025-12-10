@@ -8,7 +8,7 @@ namespace Scr.Enemy.State.Asset {
     public class LakituMoveBehaviourState : AEnemyBehaviourState　{
         
         [Title("Target")]
-        [SerializeField] private Transform _target; // プレイヤー（マリオ）
+        [SerializeField] private GameObject _target; // プレイヤー（マリオ）
         [SerializeField] private float _heightFromTarget = 5.0f; // マリオの頭上何メートルに浮くか
 
         [Title("Movement")]
@@ -43,7 +43,7 @@ namespace Scr.Enemy.State.Asset {
             base.FixedUpdate(deltaTime);
             // 1. 目標地点の計算
             // XとZはマリオの位置、Yは「マリオの高さ + 指定した高さ + ふわふわ成分」
-            Vector3 targetPos = _target.position;
+            Vector3 targetPos = _target.transform.position;
         
             // 高さ(Y)にふわふわ(Sin波)を加える
             float hoverOffset = Mathf.Sin(Time.fixedTime * _bobbingSpeed) * _bobbingAmount;
@@ -79,7 +79,7 @@ namespace Scr.Enemy.State.Asset {
         private void LockTarget() {
             // マリオの方を向く処理
             // Y軸回転のみ行い、変に傾かないようにする
-            Vector3 direction = _target.position - _enemy.transform.position;
+            Vector3 direction = _target.transform.position - _enemy.transform.position;
             direction.y = 0; // 高低差は無視して水平方向のみ向く
 
             if (direction != Vector3.zero)

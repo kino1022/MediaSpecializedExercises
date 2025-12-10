@@ -7,14 +7,14 @@ namespace Scr.Enemy.State.Asset {
     public class LakituThrowBehaviourState : AEnemyBehaviourState {
 
         [SerializeField]
-        private Transform _target;
+        private GameObject _target;
         
         [SerializeField]
         [LabelText("投げる強さ")]
-        private Vector3 _throwForce = new Vector3(0f, 5f, 10f);
+        private Vector3 _throwForce = new Vector3(0.0f, 5f, 0.0f);
         [SerializeField]
         [LabelText("投げる座標")]
-        private Transform _throwPoint;
+        private GameObject _throwPoint;
         [SerializeField]
         [LabelText("投げるもの")]
         private Rigidbody _throwPrefab;
@@ -35,8 +35,8 @@ namespace Scr.Enemy.State.Asset {
             // 1. 生成 (Instantiate)
             Rigidbody paipoInstance = GameObject.Instantiate(
                 _throwPrefab,
-                _throwPoint.position, 
-                _throwPoint.rotation
+                _throwPoint.transform.position, 
+                _throwPoint.transform.rotation
                 );
 
             // 2. 力を加える方向を計算
@@ -45,11 +45,12 @@ namespace Scr.Enemy.State.Asset {
             if (_towardsPlayer && _target != null)
             {
                 // プレイヤーへの方向ベクトル（Y軸は無視して水平方向のみ）
-                Vector3 direction = (_target.position - _throwPoint.position).normalized;
+                Vector3 direction = (_target.transform.position - _throwPoint.transform.position).normalized;
+                direction.z = 0.0f;
             
                 // 設定された「上への力(Y)」は維持しつつ、「水平方向の力(X,Z)」をプレイヤーに向ける
                 // _throwForce.z を「前方向への強さ」として扱います
-                float forwardForce = _throwForce.x;
+                float forwardForce = _throwForce.x == 0.0f　? 1.0f : _throwForce.x;
                 float upwardForce = _throwForce.y;
 
                 // 方向 * 前への強さ + 上への強さ
