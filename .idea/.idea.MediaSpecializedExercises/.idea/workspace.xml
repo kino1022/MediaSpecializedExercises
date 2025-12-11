@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9873e4e3-8843-45ac-94df-8763c15cdf16" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/ScoreManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/ScoreManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituMoveBehaviourState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituMoveBehaviourState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituThrowBehaviourState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Enemy/State/Asset/LakituThrowBehaviourState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Action/ActionInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Action/ArtherJumpAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,10 +64,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/GetComponentFromWhole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/System/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/System/PlayerControl_Assignment01.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/System/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/TitleLogo.uxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@8c70d0b94b30/Runtime/Container.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@8c70d0b94b30/Runtime/ContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@8c70d0b94b30/Runtime/IObjectResolverExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -183,6 +191,7 @@
       <workItem from="1765359045020" duration="266000" />
       <workItem from="1765369988482" duration="4148000" />
       <workItem from="1765416841143" duration="607000" />
+      <workItem from="1765420430019" duration="1948000" />
     </task>
     <servers />
   </component>
