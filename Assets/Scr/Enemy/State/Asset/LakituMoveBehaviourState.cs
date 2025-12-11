@@ -41,19 +41,20 @@ namespace Scr.Enemy.State.Asset {
 
         public override void FixedUpdate(float deltaTime) {
             base.FixedUpdate(deltaTime);
-            // 1. 目標地点の計算
-            // XとZはマリオの位置、Yは「マリオの高さ + 指定した高さ + ふわふわ成分」
+            
+            //目標の位置(ターゲットの位置を取得)
             Vector3 targetPos = _target.transform.position;
-        
-            // 高さ(Y)にふわふわ(Sin波)を加える
+            
+            //高さの補正に対してサイン波を加えてフワフワを表現
             float hoverOffset = Mathf.Sin(Time.fixedTime * _bobbingSpeed) * _bobbingAmount;
+            //目標の高さに対して補正値を加算
             targetPos.y += _heightFromTarget + hoverOffset;
 
-            // 2. 現在位置
+            //現在の自分の位置をRigidbodyから取得
             Vector3 currentPos = _rigidBody.position;
 
-            // 3. SmoothDampで「次のフレームに居てほしい場所」を計算
-            // Vector3.SmoothDampを使えばXYZまとめて計算してくれます
+
+            //Vector3.SmoothDampを利用して滑らかに移動するための次の座標を取得
             Vector3 nextPos = Vector3.SmoothDamp(
                 currentPos,
                 targetPos,
@@ -62,12 +63,13 @@ namespace Scr.Enemy.State.Asset {
                 _maxSpeed
             );
 
-            // 4. 速度を計算してRigidbodyに適用
-            // (目標位置 - 現在位置) / 経過時間 = 必要な速度
+            //次の座標に向かうための方向ベクトルを算出
             Vector3 neededVelocity = (nextPos - currentPos) / Time.fixedDeltaTime;
+            //算出したベクトルをRigidBodyに放り込む
             _rigidBody.linearVelocity = neededVelocity;
 
             if (_lookAtTarget) {
+                //ターゲットの方を向く処理を実行
                 LockTarget();
             }
         }
@@ -77,15 +79,16 @@ namespace Scr.Enemy.State.Asset {
         }
 
         private void LockTarget() {
-            // マリオの方を向く処理
-            // Y軸回転のみ行い、変に傾かないようにする
+            
+            //自分の位置からターゲットの位置への方向ベクトルを算出
             Vector3 direction = _target.transform.position - _enemy.transform.position;
-            direction.y = 0; // 高低差は無視して水平方向のみ向く
+            //高低差は無視しておく
+            direction.y = 0; 
 
-            if (direction != Vector3.zero)
-            {
+            if (direction != Vector3.zero) 　{
+                //その方向を向くための回転を算出
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
-                // 向きも少し遅れて滑らかに変えるなら Slerp を使う
+                //回転をRigidBodyに実行させる
                 _rigidBody.rotation = Quaternion.Slerp(_rigidBody.rotation, targetRotation, Time.fixedDeltaTime * 5.0f);
             }
         }

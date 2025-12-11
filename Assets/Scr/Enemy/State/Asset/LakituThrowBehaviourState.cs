@@ -32,25 +32,25 @@ namespace Scr.Enemy.State.Asset {
         private void ThrowEnemy() {
             if (_throwPrefab == null || _throwPoint  == null) return;
 
-            // 1. 生成 (Instantiate)
+            //投げるオブジェクトを生成
             Rigidbody paipoInstance = GameObject.Instantiate(
                 _throwPrefab,
                 _throwPoint.transform.position, 
                 _throwPoint.transform.rotation
                 );
 
-            // 2. 力を加える方向を計算
+            //投げる力を決める
             Vector3 finalForce = _throwForce;
 
             if (_towardsPlayer && _target != null)
             {
-                // プレイヤーへの方向ベクトル（Y軸は無視して水平方向のみ）
+                // プレイヤーへの方向ベクトル（Y軸は無視して水平方向のみ）を取得
                 Vector3 direction = (_target.transform.position - _throwPoint.transform.position).normalized;
                 direction.z = 0.0f;
-            
-                // 設定された「上への力(Y)」は維持しつつ、「水平方向の力(X,Z)」をプレイヤーに向ける
-                // _throwForce.z を「前方向への強さ」として扱います
+                
+                //X軸の投げる力を算出
                 float forwardForce = _throwForce.x == 0.0f　? 1.0f : _throwForce.x;
+                //Y軸の投げる力を算出
                 float upwardForce = _throwForce.y;
 
                 // 方向 * 前への強さ + 上への強さ
