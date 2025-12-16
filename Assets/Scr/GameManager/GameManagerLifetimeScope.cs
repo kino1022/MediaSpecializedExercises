@@ -1,5 +1,6 @@
 using MessagePipe;
 using RinaSymbol;
+using Scr.Player;
 using Scr.Utility;
 using UnityEngine;
 using VContainer;
@@ -12,6 +13,10 @@ namespace Scr.GameManager {
 
             builder
                 .RegisterMessagePipe();
+            
+            builder
+                .Register<IPlayableManager, PlayableManager>(Lifetime.Singleton)
+                .As<IPlayableProvider>();
             
             var audioSource = gameObject.GetComponentFromWhole<AudioSource>();
 
