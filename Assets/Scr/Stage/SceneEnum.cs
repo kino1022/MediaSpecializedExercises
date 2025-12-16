@@ -16,7 +16,7 @@ namespace Scr.Stage {
         public static string ToSceneName(this SceneEnum sceneEnum) {
             return sceneEnum switch {
                 SceneEnum.TitleScene => "TitleScene",
-                SceneEnum.Stage1_1 => "Stage1-1",
+                SceneEnum.Stage1_1 => "Lesson01",
                 SceneEnum.Stage1_2 => "Stage1-2",
                 _ => "UnknownScene"
             };

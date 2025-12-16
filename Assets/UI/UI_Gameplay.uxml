@@ -1,18 +1,27 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="UIField">
-        <ui:VisualElement name="UICoin" style="flex-grow: 1; align-items: auto; width: 20%; height: 100%; position: absolute; left: 20%;">
-            <ui:VisualElement name="CoinImage" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/CoinUI.png?fileID=2800000&amp;guid=73fafc92d7b5745918503ef7d84c254f&amp;type=3#CoinUI&quot;); -unity-background-scale-mode: scale-to-fit; align-items: auto; align-self: auto; width: 100%; height: 100%;" />
-            <ui:Label text="Label" name="CoinAmount" />
+
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="UIField" style="flex-direction: row; justify-content: space-around; width: 100%; padding-top: 20px; padding-left: 20px; padding-right: 20px;">
+        
+        <ui:VisualElement name="UIF_score" style="align-items: flex-start;">
+            <ui:Label text="Bear" name="PlayerName" style="color: white; font-size: 24px; -unity-font-style: bold;" />
+            <ui:Label text="000000" name="PlayerScore" style="color: white; font-size: 24px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="UIScore" style="align-items: flex-start; justify-content: center; width: 10%; position: absolute; left: 10%;">
-            <ui:Label text="Label" name="PlayerName" />
-            <ui:Label text="Score :" name="Score" style="height: 25px; position: relative;" />
+
+        <ui:VisualElement name="UIF_coin" style="flex-direction: row; align-items: center;">
+            <ui:VisualElement name="CoinImage" style="width: 30px; height: 30px; background-color: yellow; margin-right: 5px; border-radius: 15px;" />
+            <ui:Label text="x" name="CoinX" style="color: white; font-size: 24px; margin-right: 5px;" />
+            <ui:Label text="00" name="PlayerCoin" style="color: white; font-size: 24px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="UIWorld" style="flex-grow: 1; width: 20%; height: 100%; position: absolute; left: 40%;">
-            <ui:Label text="World :&#10;" name="World" />
+
+        <ui:VisualElement name="UIF_world" style="align-items: center;">
+            <ui:Label text="WORLD" name="WORLD" style="color: white; font-size: 24px; -unity-font-style: bold;" />
+            <ui:Label text="1-1" name="PlayerWorld" style="color: white; font-size: 24px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="UITime" style="flex-grow: 1; width: 20%; height: 100px; background-size: 100% 100%; left: 70%;">
-            <ui:Label text="Time&#10;" name="Time" style="height: 16px;" />
+
+        <ui:VisualElement name="UIF_time" style="align-items: flex-end;">
+            <ui:Label text="TIME" name="TIME" style="color: white; font-size: 24px; -unity-font-style: bold;" />
+            <ui:Label text="999" name="PlayerTime" style="color: white; font-size: 24px;" />
         </ui:VisualElement>
+
     </ui:VisualElement>
 </ui:UXML>

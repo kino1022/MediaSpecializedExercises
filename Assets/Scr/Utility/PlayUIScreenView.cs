@@ -12,8 +12,8 @@ namespace Scr.Utility {
         public Label NameLabel { get; }
 
         public PlayUIScreenView(VisualElement root) {
-            ScoreLabel = root.Q<Label>("Score");
-            TimeLabel = root.Q<Label>("CoinAmount");
+            ScoreLabel = root.Q<Label>("PlayerScore");
+            TimeLabel = root.Q<Label>("PlayerTime");
             NameLabel = root.Q<Label>("PlayerName");
         }
         

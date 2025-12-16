@@ -9,6 +9,21 @@ using VContainer.Unity;
 
 namespace Scr.GameManager {
     public class GameManagerLifetimeScope : SymbolLifetimeScope {
+        
+        private ITimeManager _timeManager;
+        
+        private IScoreManager _scoreManager;
+
+        protected void Start() {
+            _scoreManager = Container.Resolve<IScoreManager>();
+            
+            _timeManager = Container.Resolve<ITimeManager>();
+            
+            _timeManager.InitTimer(300);
+            
+            _timeManager.StartCount();
+        }
+        
         protected override void Configure(IContainerBuilder builder) {
             base.Configure(builder);
 

@@ -47,6 +47,7 @@ namespace Scr.GameManager {
 
         public void InitTimer(int maxCount) {
             _maxCount = maxCount;
+            _currentCount = maxCount;
         }
 
         public void StartCount() {

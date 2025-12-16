@@ -6,8 +6,16 @@ using Scr.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 
 namespace Scr.Stage {
+
+    public enum ClearPerformanceEnum {
+        None,
+        RideFlag,
+        WalkStageOut
+    }
+    
     public class ClearFlagController : SerializedMonoBehaviour {
 
         /// <summary>
@@ -57,20 +65,24 @@ namespace Scr.Stage {
         /// </summary>
         [SerializeField]
         private SceneEnum m_nextScene;
+
+        private ClearPerformanceEnum _performanceEnum = ClearPerformanceEnum.None;
         
         private ITimeManager _timeManager;
         
         private IScoreManager _scoreManager;
 
+        [SerializeField]
         private Animator _cachedPlayerAnimator;
         
+        [SerializeField]
         private Rigidbody _cachedPlayerRigidbody;
 
         private IPlayableManager _playable;
 
         private IObjectResolver _resolver;
         
-        private IObjectResolver _playerResolver;
+        private LifetimeScope _playerResolver;
 
         [Inject]
         public void Construct(IObjectResolver resolver) {
@@ -84,15 +96,15 @@ namespace Scr.Stage {
             _playable ??= gameObject.GetComponentFromWhole<IPlayableManager>();
             
             //プレイヤーのコンテナを取得
-            _playerResolver = m_player.gameObject.GetComponentFromWhole<IObjectResolver>();
+            _playerResolver = m_player.gameObject.GetComponentFromWhole<LifetimeScope>();
             
             //プレイヤーのアニメーターを取得
-            _cachedPlayerAnimator = _playerResolver.Resolve<Animator>();
+            _cachedPlayerAnimator = _playerResolver.Container.Resolve<Animator>();
             //取得できなかった場合は全体からコンポーネント取得
             _cachedPlayerAnimator ??= gameObject.GetComponentFromWhole<Animator>();
             
             //プレイヤーのリジッドボディを取得
-            _cachedPlayerRigidbody = _playerResolver.Resolve<Rigidbody>();
+            _cachedPlayerRigidbody = _playerResolver.Container.Resolve<Rigidbody>();
             //取得できなかった場合は全体からコンポーネント取得
             _cachedPlayerRigidbody ??= gameObject.GetComponentFromWhole<Rigidbody>();
             
@@ -101,7 +113,28 @@ namespace Scr.Stage {
             _scoreManager = _resolver.Resolve<IScoreManager>();
         }
 
-        private void OnCollisionEnter(Collision other) {
+        private void Update() {
+            
+            if (_performanceEnum is ClearPerformanceEnum.None) {
+                return;
+            }
+            
+            if (_performanceEnum is ClearPerformanceEnum.RideFlag) {
+                _cachedPlayerAnimator.SetBool("ride",true);
+                return;
+            }
+            else {
+                _cachedPlayerAnimator.SetBool("ride",false);
+            }
+
+            if (_performanceEnum is ClearPerformanceEnum.WalkStageOut) {
+                _cachedPlayerAnimator.SetFloat("speed", 1);
+                _cachedPlayerAnimator.SetBool("move", true);
+            }
+
+        }
+
+        private void OnTriggerEnter(Collider other) {
             //衝突したオブジェクトがプレイヤーなら始動
             if (other.gameObject == m_player) {
                 //処理の最後なのでForgetを安全に使用できる
@@ -125,14 +158,23 @@ namespace Scr.Stage {
             //操作可能フラグを折っておく
             _playable.SetPlayable(false);
             
+            _cachedPlayerAnimator.Rebind();
+            _performanceEnum = ClearPerformanceEnum.RideFlag;
+            
             //旗の根本に移動するのを待機
             await LocomotionFlagBottom();
+            
+            _performanceEnum = ClearPerformanceEnum.None;
             
             //残り時間をスコアに加算する演出
             await AddTimeScore();
             
+            _performanceEnum = ClearPerformanceEnum.WalkStageOut;
+            
             //とぼとぼ歩いていく演出
             await LocomotionStageOut();
+            
+            _performanceEnum = ClearPerformanceEnum.None;
             
             //次のシーンへ遷移
             m_nextScene.LoadScene();
@@ -140,19 +182,11 @@ namespace Scr.Stage {
 
         private async UniTask LocomotionFlagBottom() {
             try {
-                
-                _cachedPlayerAnimator ??= m_player.GetComponentFromWhole<Animator>();
-                if (_cachedPlayerAnimator is null) {
-                    return;
-                }
-                
                 //プレイヤーから旗の根本への方向ベクトルを取得
-                var velocity = (m_player.transform.position - m_flagBottom.transform.position).normalized;
+                var velocity = (m_flagBottom.transform.position - m_player.transform.position).normalized;
 
-                while (m_player.transform.position == m_flagBottom.transform.position || !this.GetCancellationTokenOnDestroy().IsCancellationRequested) {
+                while (m_player.transform.position.y > m_flagBottom.transform.position.y) {
                     
-                    //アニメーションの再生
-                    _cachedPlayerAnimator.SetBool("Bear_ride", true);
                     
                     //一気に動かないように一定時間待機
                     await UniTask.Delay(
@@ -162,7 +196,7 @@ namespace Scr.Stage {
                     );
                     
                     //次の座標を算出
-                    var nextPosition = m_player.transform.position + velocity * m_clearWalkSpeed;
+                    var nextPosition = m_player.transform.position + velocity * m_downFlagSpeed;
                     //演出なのでTransformに対して直で代入する
                     m_player.transform.position = nextPosition;
                 }
@@ -171,17 +205,17 @@ namespace Scr.Stage {
                 Debug.LogWarning("クリア演出中に処理がキャンセルされました。テストモードを落としてください");
             }
             finally {
-                //アニメーションの再生を終了する
-                _cachedPlayerAnimator?.SetBool("Bear_ride", false);
             }
+            
         }
 
         private async UniTask AddTimeScore() {
             try {
-                while (_timeManager.CurrentCount <= 0 || !this.GetCancellationTokenOnDestroy().IsCancellationRequested) {
+                _timeManager.StopCount();
+                while (_timeManager.CurrentCount > 1) {
                     //待機時間を設定
                     await UniTask.Delay(
-                        TimeSpan.FromSeconds(0.1f),
+                        TimeSpan.FromSeconds(0.01f),
                         cancellationToken: this.GetCancellationTokenOnDestroy()
                     );
                     
@@ -202,20 +236,19 @@ namespace Scr.Stage {
 
         private async UniTask LocomotionStageOut() {
             try {
-                var velocity = (m_player.transform.position - m_flagBottom.transform.position).normalized;
                 
-                _cachedPlayerAnimator.SetFloat("Speed", 1.0f);
-                _cachedPlayerAnimator.SetBool("Walk", true);
+                var velocity = (m_walkEndPoint.transform.position - m_player.transform.position).normalized;
                 
-                while (m_player.transform.position == m_walkEndPoint.transform.position || !this.GetCancellationTokenOnDestroy().IsCancellationRequested) {
-                    
-                    //アニメーションの再生
-                    _cachedPlayerAnimator.SetBool("Walk", true);
+                while (m_player.transform.position.x <= m_walkEndPoint.transform.position.x) {
+
+                    m_player.transform.localScale = velocity.x < 0.0f
+                        ? new Vector3(-1.0f, 1.0f, 1.0f)
+                        : new Vector3(1.0f, 1.0f, 1.0f);
                     
                     //一気に動かないように一定時間待機
                     await UniTask.Delay(
                         //待機時間は0.1秒に指定(これは本来なら変数にするべき)
-                        TimeSpan.FromSeconds(0.1f),
+                        TimeSpan.FromSeconds(0.01f),
                         cancellationToken: this.GetCancellationTokenOnDestroy()
                     );
                     
@@ -229,8 +262,6 @@ namespace Scr.Stage {
 
             }
             finally {
-                _cachedPlayerAnimator.SetFloat("Speed", 0.0f);
-                _cachedPlayerAnimator.SetBool("Walk", false);
             }
         }
     }
