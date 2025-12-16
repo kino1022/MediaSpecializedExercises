@@ -24,7 +24,6 @@ namespace Scr.GameManager {
         }
 
         private void Update() {
-            _scoreLabel.text = ScoreManager.Score.ToString();
         }
     }
 }

@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9873e4e3-8843-45ac-94df-8763c15cdf16" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/indexLayout.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Stage/SceneEnum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Stage/SceneEnum.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Stage/SceneEnum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/GetComponentFromWhole.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +117,7 @@
 }</component>
   <component name="RunManager" selected="Unity のアタッチ先.アタッチ先">
     <configuration name="ユニットテスト (バッチモード)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.2.7f2/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -121,7 +127,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity の起動" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.2.7f2/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -191,6 +197,8 @@
       <workItem from="1765422945201" duration="393000" />
       <workItem from="1765803333234" duration="587000" />
       <workItem from="1765880020856" duration="1648000" />
+      <workItem from="1765881802216" duration="35000" />
+      <workItem from="1765881839963" duration="3207000" />
     </task>
     <servers />
   </component>

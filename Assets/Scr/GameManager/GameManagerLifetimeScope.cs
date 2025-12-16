@@ -3,6 +3,7 @@ using RinaSymbol;
 using Scr.Player;
 using Scr.Utility;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using VContainer;
 using VContainer.Unity;
 
@@ -17,6 +18,12 @@ namespace Scr.GameManager {
             builder
                 .Register<IPlayableManager, PlayableManager>(Lifetime.Singleton)
                 .As<IPlayableProvider>();
+
+            builder
+                .Register<ITimeManager, TimeManager>(Lifetime.Singleton);
+
+            builder
+                .Register<IScoreManager, ScoreManager>(Lifetime.Singleton);
             
             var audioSource = gameObject.GetComponentFromWhole<AudioSource>();
 
