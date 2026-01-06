@@ -212,6 +212,7 @@ MonoBehaviour:
   _isJumping: 0
   _isHolding: 0
   _holdCounter: 0
+  _jumpAudioClip: {fileID: 8300000, guid: 573a57eea80ad154f892f6833ff4b543, type: 3}
 --- !u!114 &5690162796261232905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +245,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   _shootItem: {fileID: 4430914363932151897, guid: 23706d970a1e294438c9972e5ac7b341, type: 3}
   _shootPoint: {fileID: 8476977164138366935}
+  _fireAudioClip: {fileID: 0}
 --- !u!1001 &5957013716934528277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.272
+      value: -11.58
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.y

@@ -53,8 +53,7 @@ namespace Scr.GameManager {
             var uiScreenView = new Scr.Utility.PlayUIScreenView(root);
             _scoreLabel = uiScreenView.ScoreLabel;
             _timeLabel = uiScreenView.TimeLabel;
-            _lifeLabel = root.Q<Label>("life");
-            _coinLabel = root.Q<Label>("coin");
+            _coinLabel = root.Q<Label>("PlayerCoin");
         }
 
         private void Update() {
@@ -67,7 +66,6 @@ namespace Scr.GameManager {
             
             _coinLabel.text = $"{_coinManager.CurrentValue}";
             
-            _lifeLabel.text = $"{_lifeManager.CurrentLife}";
             
         }
     }
