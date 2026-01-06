@@ -1,9 +1,10 @@
 namespace Scr.Stage {
     public enum SceneEnum {
         
-        TitleScene = 0,
-        Stage1_1 = 1,
-        Stage1_2 = 2,
+        TitleScene,
+        Stage1_1_1,
+        Stage1_1_2,
+        Stage1_2
     }
 
     public static class SceneEnumExtension {
@@ -16,7 +17,8 @@ namespace Scr.Stage {
         public static string ToSceneName(this SceneEnum sceneEnum) {
             return sceneEnum switch {
                 SceneEnum.TitleScene => "TitleScene",
-                SceneEnum.Stage1_1 => "Lesson01",
+                SceneEnum.Stage1_1_1 => "Stage1-1-1",
+                SceneEnum.Stage1_1_2 => "Stage1-1-1",
                 SceneEnum.Stage1_2 => "Stage1-2",
                 _ => "UnknownScene"
             };
@@ -27,7 +29,10 @@ namespace Scr.Stage {
         /// </summary>
         /// <param name="sceneEnum"></param>
         public static void LoadScene(this SceneEnum sceneEnum) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneEnum.ToSceneName());
+            UnityEngine
+                .SceneManagement
+                .SceneManager
+                .LoadScene(sceneEnum.ToSceneName());
         }
     }
 }

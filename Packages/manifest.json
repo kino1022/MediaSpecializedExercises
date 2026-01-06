@@ -7,6 +7,8 @@
     "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
     "com.kino1022.rinainput": "https://github.com/kino1022/RinaInput.git",
     "com.kino1022.rinasymbol": "https://github.com/kino1022/RinaSymbol.git",
+    "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.2d.tilemap.extras": "5.0.2",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.cinemachine": "3.1.5",
     "com.unity.collab-proxy": "2.10.2",

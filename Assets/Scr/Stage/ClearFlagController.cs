@@ -161,6 +161,8 @@ namespace Scr.Stage {
             _cachedPlayerAnimator.Rebind();
             _performanceEnum = ClearPerformanceEnum.RideFlag;
             
+            _scoreManager.AddScore(CalculateScore());
+            
             //旗の根本に移動するのを待機
             await LocomotionFlagBottom();
             
@@ -200,6 +202,7 @@ namespace Scr.Stage {
                     //演出なのでTransformに対して直で代入する
                     m_player.transform.position = nextPosition;
                 }
+                
             }
             catch (OperationCanceledException) {
                 Debug.LogWarning("クリア演出中に処理がキャンセルされました。テストモードを落としてください");
@@ -263,6 +266,29 @@ namespace Scr.Stage {
             }
             finally {
             }
+        }
+
+        private int CalculateScore() {
+            float deltaHeight = m_player.transform.position.y - m_flagBottom.transform.position.y;
+            
+            float flagHeight = m_flagTop.transform.position.y - m_flagBottom.transform.position.y;
+
+            float divValue = flagHeight / 5;
+
+            if (deltaHeight >= divValue * 4) {
+                return 5000;
+            }
+            if (deltaHeight >= divValue * 3) {
+                return 4000;
+            }
+            if (deltaHeight >= divValue * 2) {
+                return 3000;
+            }
+            if (deltaHeight >= divValue * 1) {
+                return 2000;
+            }
+
+            return 1000;
         }
     }
 }

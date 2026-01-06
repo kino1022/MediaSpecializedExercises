@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9873e4e3-8843-45ac-94df-8763c15cdf16" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/CoinManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/CoinManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/LifeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/LifeManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FBX/Bear_animCTRL.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FBX/Bear_animCTRL.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/Stage/SceneEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Stage/SceneEnum.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UI_Gameplay.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UI_Gameplay.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +46,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Enemy/State/EnemyStatePattern.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/FireBallController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/FireBall/TimeToDeath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/CoinManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/GameUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/LifeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/GameManager/TimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Action/ActionInstaller.cs" root0="FORCE_HIGHLIGHTING" />
@@ -202,7 +205,11 @@
       <workItem from="1765880020856" duration="1648000" />
       <workItem from="1765881802216" duration="35000" />
       <workItem from="1765881839963" duration="3207000" />
-      <workItem from="1765888471115" duration="5821000" />
+      <workItem from="1765888471115" duration="5922000" />
+      <workItem from="1765937376821" duration="1107000" />
+      <workItem from="1765974145539" duration="2381000" />
+      <workItem from="1767675272023" duration="1272000" />
+      <workItem from="1767695471052" duration="1900000" />
     </task>
     <servers />
   </component>

@@ -15,9 +15,17 @@ namespace Scr.GameManager {
 
         private Label _timeLabel;
         
+        private Label _coinLabel;
+        
+        private Label _lifeLabel;
+        
         private ITimeManager _timeManager;
         
         private IScoreManager _scoreManager;
+        
+        private ILifeManager _lifeManager;
+        
+        private ICoinManager _coinManager;
         
         private IObjectResolver _resolver;
         
@@ -32,6 +40,10 @@ namespace Scr.GameManager {
             
             _timeManager = _resolver.Resolve<ITimeManager>();
             
+            _lifeManager = _resolver.Resolve<ILifeManager>();
+            
+            _coinManager = _resolver.Resolve<ICoinManager>();
+            
             if (uiDocument == null) {
                 Debug.LogError("UIDocument is not assigned.");
                 return;
@@ -41,6 +53,8 @@ namespace Scr.GameManager {
             var uiScreenView = new Scr.Utility.PlayUIScreenView(root);
             _scoreLabel = uiScreenView.ScoreLabel;
             _timeLabel = uiScreenView.TimeLabel;
+            _lifeLabel = root.Q<Label>("life");
+            _coinLabel = root.Q<Label>("coin");
         }
 
         private void Update() {
@@ -50,6 +64,11 @@ namespace Scr.GameManager {
             }
             
             _timeLabel.text = $"{_timeManager.CurrentCount}";
+            
+            _coinLabel.text = $"{_coinManager.CurrentValue}";
+            
+            _lifeLabel.text = $"{_lifeManager.CurrentLife}";
+            
         }
     }
 }
