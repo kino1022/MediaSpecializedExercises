@@ -1,10 +1,13 @@
+using System;
+
 namespace Scr.Stage {
+    [Serializable]
     public enum SceneEnum {
         
         TitleScene,
-        Stage1_1_1,
-        Stage1_1_2,
-        Stage1_2
+        Stage1_1,
+        DeadScene,
+        GameOverScene
     }
 
     public static class SceneEnumExtension {
@@ -17,9 +20,9 @@ namespace Scr.Stage {
         public static string ToSceneName(this SceneEnum sceneEnum) {
             return sceneEnum switch {
                 SceneEnum.TitleScene => "TitleScene",
-                SceneEnum.Stage1_1_1 => "Stage1-1-1",
-                SceneEnum.Stage1_1_2 => "Stage1-1-1",
-                SceneEnum.Stage1_2 => "Stage1-2",
+                SceneEnum.Stage1_1 => "Stage1-1-1",
+                SceneEnum.DeadScene => "DeadScene",
+                SceneEnum.GameOverScene => "GameOverScene",
                 _ => "UnknownScene"
             };
         }

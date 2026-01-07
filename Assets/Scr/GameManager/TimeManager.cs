@@ -42,7 +42,8 @@ namespace Scr.GameManager {
         public int CurrentCount => _currentCount;
         
         public TimeManager(IObjectResolver resolver) {
-            CountAsync().Forget();
+            CountAsync()
+                .Forget();
         }
 
         public void InitTimer(int maxCount) {
@@ -68,7 +69,9 @@ namespace Scr.GameManager {
 
         private async UniTask CountAsync() {
             while (_currentCount <= 0) {
-                await UniTask.WaitUntil(() => _isCounting == true);
+                
+                await UniTask
+                    .WaitUntil(() => _isCounting == true);
                 
                 await UniTask.Delay(
                     TimeSpan.FromSeconds(1),

@@ -1,4 +1,5 @@
 using MessagePipe;
+using Scr.GameManager;
 using Scr.Player.Action;
 using Scr.Utility;
 using Sirenix.OdinInspector;
@@ -7,6 +8,10 @@ using UnityEngine;
 using VContainer;
 
 namespace Scr.Player {
+    
+    public struct OnDeadEventBus {
+    }
+    
     public class Player : SerializedMonoBehaviour {
         
         [Title("踏みつけ判定")] 
@@ -21,7 +26,11 @@ namespace Scr.Player {
 
         private IObjectResolver _resolver;
         
+        private IPublisher<OnDeadEventBus> _deadPublisher;
+        
         private IPublisher<TakeDamageEventBus> _damagePublisher;
+        
+        private IPublisher<GetCoinEventBus> _getcoinPublisher;
 
         [Inject]
         public void Construct(IObjectResolver resolver) {
@@ -30,11 +39,21 @@ namespace Scr.Player {
 
         private void Start() {
             _damagePublisher = _resolver.Resolve<IPublisher<TakeDamageEventBus>>();
-
+            _deadPublisher = _resolver.Resolve<IPublisher<OnDeadEventBus>>();
+            _getcoinPublisher = _resolver.Resolve<IPublisher<GetCoinEventBus>>();
             var cam = FindAnyObjectByType<CinemachineCamera>();
             if (cam is not null) {
                 cam.Follow = transform;
             }
+        }
+
+        public void Die() {
+            _deadPublisher.Publish(new OnDeadEventBus());
+        }
+
+        public void GetCoin() {
+            _getcoinPublisher ??= _resolver.Resolve<IPublisher<GetCoinEventBus>>();
+            _getcoinPublisher.Publish(new GetCoinEventBus());
         }
 
         private void OnCollisionEnter(Collision other) {

@@ -1310,6 +1310,27 @@ MonoBehaviour:
     - Name: m_streamProvider
       Entry: 6
       Data: 
+--- !u!114 &47210794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47210780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bca350910948cfb0c602fb6c16458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.SceneTransManager
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &50961285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9974,8 +9995,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 436710733}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &436710732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 436710731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &436710733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436710732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &437076198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11424,8 +11474,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 503076858}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &503076857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 503076856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &503076858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503076857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &504793871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eb73f12b6e574ccfaff32de5d7d20d8, type: 3}
@@ -11794,8 +11873,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 515349565}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &515349564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 515349563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &515349565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515349564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &515437263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19654,8 +19762,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774498624}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &774498623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 774498622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &774498624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774498623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &776987672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eb73f12b6e574ccfaff32de5d7d20d8, type: 3}
@@ -22186,8 +22323,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 931702934}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &931702933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 931702932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &931702934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931702933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &932625053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eb73f12b6e574ccfaff32de5d7d20d8, type: 3}
@@ -30547,6 +30713,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5175297476899552492, guid: 0b3fb9ae170f24736b793dfeb323a2c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 47210787}
+    - targetCorrespondingSourceObject: {fileID: 5175297476899552492, guid: 0b3fb9ae170f24736b793dfeb323a2c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 47210794}
   m_SourcePrefab: {fileID: 100100000, guid: 0b3fb9ae170f24736b793dfeb323a2c7, type: 3}
 --- !u!1001 &1275537800
 PrefabInstance:
@@ -32617,8 +32786,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1360340853}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &1360340852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 1360340851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1360340853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360340852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &1361778671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eb73f12b6e574ccfaff32de5d7d20d8, type: 3}
@@ -32973,8 +33171,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1371369010}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &1371369009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 1371369008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1371369010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371369009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &1373478113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35435,8 +35662,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1450509208}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &1450509207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 1450509206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1450509208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450509207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &1457232514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eb73f12b6e574ccfaff32de5d7d20d8, type: 3}
@@ -39182,8 +39438,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1553414249}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &1553414248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 1553414247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1553414249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553414248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &1554743407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44063,8 +44348,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1726021933}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &1726021932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 1726021931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1726021933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726021932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &1726989026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50598,8 +50912,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954615163}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &1954615162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 1954615161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1954615163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954615162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &1957643168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56351,8 +56694,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134304460}
   m_SourcePrefab: {fileID: 100100000, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+--- !u!1 &2134304459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869951564590528108, guid: 0a6ebd4888d3f4b84a4faf46cc1e7a10, type: 3}
+  m_PrefabInstance: {fileID: 2134304458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134304460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134304459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab6d12053394d33a5b819b01774db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scr.GameManager.DeadBlock
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &2138601843
 PrefabInstance:
   m_ObjectHideFlags: 0

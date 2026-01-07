@@ -66,7 +66,6 @@ namespace Scr.GameManager {
             
             _coinLabel.text = $"{_coinManager.CurrentValue}";
             
-            
         }
     }
 }
