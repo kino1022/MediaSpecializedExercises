@@ -24,7 +24,14 @@ namespace Scr.Player.Action {
         protected override void OnPostStart() {
             base.OnPostStart();
             
-            _grounded = _resolver.Resolve<IGroundedManger>();
+            // PlayerのLifetimeScopeから取得（ローカルなコンポーネント）
+            var playerScope = gameObject.GetComponentInParent<VContainer.Unity.LifetimeScope>();
+            if (playerScope != null) {
+                _grounded = playerScope.Container.Resolve<IGroundedManger>();
+            }
+            else {
+                Debug.LogError($"[{GetType().Name}] PlayerのLifetimeScopeが見つかりません");
+            }
             
             RegisterInput();
         }

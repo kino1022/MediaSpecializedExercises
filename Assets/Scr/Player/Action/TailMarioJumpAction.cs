@@ -44,7 +44,15 @@ namespace Scr.Player.Action {
 
         protected override void OnPreStart() {
             base.OnPreStart();
-            _power = _resolver.Resolve<IPowerMeterManager>();
+            
+            // PlayerのLifetimeScopeから取得（ローカルなコンポーネント）
+            var playerScope = gameObject.GetComponentInParent<VContainer.Unity.LifetimeScope>();
+            if (playerScope != null) {
+                _power = playerScope.Container.Resolve<IPowerMeterManager>();
+            }
+            else {
+                Debug.LogError($"[TailMarioJumpAction] PlayerのLifetimeScopeが見つかりません");
+            }
         }
 
 

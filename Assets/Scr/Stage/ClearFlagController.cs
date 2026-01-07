@@ -95,22 +95,84 @@ namespace Scr.Stage {
             //取得できなかった場合は全体からコンポーネント取得
             _playable ??= gameObject.GetComponentFromWhole<IPlayableManager>();
             
+            // プレイヤーがInspectorで設定されていない場合は、PlayerInstanceServiceから取得
+            if (m_player == null) {
+                // TryResolveを使って、登録されていない場合でも例外を防ぐ
+                if (_resolver.TryResolve<IPlayerInstanceService>(out var instanceService)) {
+                    if (instanceService.Instanced && instanceService.InstancedPlayer != null) {
+                        m_player = instanceService.InstancedPlayer.gameObject;
+                        Debug.Log("[ClearFlagController] PlayerをPlayerInstanceServiceから取得しました");
+                    }
+                    else {
+                        // まだ生成されていない場合はイベントで待機
+                        instanceService.OnPlayerSpawned += OnPlayerSpawned;
+                        Debug.LogWarning("[ClearFlagController] Playerがまだ生成されていません。生成を待機します。");
+                        // ここでreturnして、後続の処理はOnPlayerSpawnedで実行
+                        _timeManager = _resolver.Resolve<ITimeManager>();
+                        _scoreManager = _resolver.Resolve<IScoreManager>();
+                        return;
+                    }
+                }
+                else {
+                    // PlayerInstanceServiceが登録されていない場合は、シーンから検索
+                    var instanceServiceInScene = FindObjectOfType<PlayerInstanceService>();
+                    if (instanceServiceInScene != null) {
+                        if (instanceServiceInScene.Instanced && instanceServiceInScene.InstancedPlayer != null) {
+                            m_player = instanceServiceInScene.InstancedPlayer.gameObject;
+                            Debug.Log("[ClearFlagController] Playerをシーン内のPlayerInstanceServiceから取得しました");
+                        }
+                        else {
+                            instanceServiceInScene.OnPlayerSpawned += OnPlayerSpawned;
+                            Debug.LogWarning("[ClearFlagController] Playerがまだ生成されていません。生成を待機します。");
+                            _timeManager = _resolver.Resolve<ITimeManager>();
+                            _scoreManager = _resolver.Resolve<IScoreManager>();
+                            return;
+                        }
+                    }
+                    else {
+                        Debug.LogError("[ClearFlagController] m_playerが設定されておらず、PlayerInstanceServiceも見つかりませんでした。Inspectorでm_playerを設定してください。", this);
+                        _timeManager = _resolver.Resolve<ITimeManager>();
+                        _scoreManager = _resolver.Resolve<IScoreManager>();
+                        return;
+                    }
+                }
+            }
+            
+            // Playerの参照を取得できたので、コンポーネントを取得
+            InitializePlayerComponents();
+            
+            _timeManager = _resolver.Resolve<ITimeManager>();
+            _scoreManager = _resolver.Resolve<IScoreManager>();
+        }
+        
+        private void OnPlayerSpawned(Scr.Player.Player player) {
+            m_player = player.gameObject;
+            Debug.Log("[ClearFlagController] Playerが生成されたので、コンポーネントを初期化します");
+            InitializePlayerComponents();
+        }
+        
+        private void InitializePlayerComponents() {
+            if (m_player == null) {
+                Debug.LogError("[ClearFlagController] InitializePlayerComponents: m_playerがnullです");
+                return;
+            }
+            
             //プレイヤーのコンテナを取得
             _playerResolver = m_player.gameObject.GetComponentFromWhole<LifetimeScope>();
             
             //プレイヤーのアニメーターを取得
-            _cachedPlayerAnimator = _playerResolver.Container.Resolve<Animator>();
+            if (_playerResolver != null) {
+                _cachedPlayerAnimator = _playerResolver.Container.Resolve<Animator>();
+            }
             //取得できなかった場合は全体からコンポーネント取得
-            _cachedPlayerAnimator ??= gameObject.GetComponentFromWhole<Animator>();
+            _cachedPlayerAnimator ??= m_player.GetComponentFromWhole<Animator>();
             
             //プレイヤーのリジッドボディを取得
-            _cachedPlayerRigidbody = _playerResolver.Container.Resolve<Rigidbody>();
+            if (_playerResolver != null) {
+                _cachedPlayerRigidbody = _playerResolver.Container.Resolve<Rigidbody>();
+            }
             //取得できなかった場合は全体からコンポーネント取得
-            _cachedPlayerRigidbody ??= gameObject.GetComponentFromWhole<Rigidbody>();
-            
-            _timeManager = _resolver.Resolve<ITimeManager>();
-            
-            _scoreManager = _resolver.Resolve<IScoreManager>();
+            _cachedPlayerRigidbody ??= m_player.GetComponentFromWhole<Rigidbody>();
         }
 
         private void Update() {
@@ -197,8 +259,8 @@ namespace Scr.Stage {
                         cancellationToken: this.GetCancellationTokenOnDestroy()
                     );
                     
-                    //次の座標を算出
-                    var nextPosition = m_player.transform.position + velocity * m_downFlagSpeed;
+                    //次の座標を算出（deltaTimeの代わりに0.1fを使用）
+                    var nextPosition = m_player.transform.position + velocity * m_downFlagSpeed * 0.1f;
                     //演出なのでTransformに対して直で代入する
                     m_player.transform.position = nextPosition;
                 }
@@ -206,8 +268,6 @@ namespace Scr.Stage {
             }
             catch (OperationCanceledException) {
                 Debug.LogWarning("クリア演出中に処理がキャンセルされました。テストモードを落としてください");
-            }
-            finally {
             }
             
         }
@@ -225,15 +285,12 @@ namespace Scr.Stage {
                     //時間を1減らす
                     _timeManager.SetCurrentCount(_timeManager.CurrentCount - 1);
                     
-                    //スコアに加算する処理をここに追加
+                    //スコアに加算する（0.01秒ごとにm_scorePerTimeを加算）
                     _scoreManager.AddScore(m_scorePerTime);
                 }
             }
             catch (OperationCanceledException) {
-
-            }
-            finally {
-                
+                Debug.LogWarning("スコア加算演出中に処理がキャンセルされました");
             }
         }
 
@@ -242,7 +299,7 @@ namespace Scr.Stage {
                 
                 var velocity = (m_walkEndPoint.transform.position - m_player.transform.position).normalized;
                 
-                while (m_player.transform.position.x <= m_walkEndPoint.transform.position.x) {
+                while (Vector3.Distance(m_player.transform.position, m_walkEndPoint.transform.position) > 0.1f) {
 
                     m_player.transform.localScale = velocity.x < 0.0f
                         ? new Vector3(-1.0f, 1.0f, 1.0f)
@@ -256,15 +313,13 @@ namespace Scr.Stage {
                     );
                     
                     //次の座標を算出
-                    var nextPosition = m_player.transform.position + velocity * m_clearWalkSpeed;
+                    var nextPosition = m_player.transform.position + velocity * m_clearWalkSpeed * 0.01f;
                     //演出なのでTransformに対して直で代入する
                     m_player.transform.position = nextPosition;
                 }
             }
             catch (OperationCanceledException) {
 
-            }
-            finally {
             }
         }
 

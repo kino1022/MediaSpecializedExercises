@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9873e4e3-8843-45ac-94df-8763c15cdf16" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/PlayerInstanceService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scr/Player/PlayerInstanceService.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaSpecializedExercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lesson01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage1-1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage1-1-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/GameManager/GameManagerLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/JumpActionBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/MoveAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/MoveAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/PlayerActionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/PlayerActionBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Action/TailMarioJumpAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Action/TailMarioJumpAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scr/Stage/WarpPipeBehaviourController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Stage/WarpPipeBehaviourController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Ground/Dokan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Ground/Dokan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Player_Bear_Custom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Player_Bear_Custom.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +70,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/GroundedManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayerInstanceService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PlayerLifetimeScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Player/PowerMeterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Stage/ClearFlagController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Stage/SceneEnum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Stage/WarpPipeBehaviourController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/GetComponentFromWhole.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/PlayUIScreenView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Utility/TakeDamageEventBus.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,7 +92,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@8c70d0b94b30/Runtime/Internal/TypeAnalyzer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -205,6 +219,7 @@
       <workItem from="1767695471052" duration="1900000" />
       <workItem from="1767714748575" duration="1332000" />
       <workItem from="1767743791978" duration="4788000" />
+      <workItem from="1767758106135" duration="9940000" />
     </task>
     <servers />
   </component>

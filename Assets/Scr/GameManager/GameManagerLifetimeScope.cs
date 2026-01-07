@@ -17,6 +17,9 @@ namespace Scr.GameManager {
         private ICoinManager _coinManager;
         
         private ILifeManager _lifeManager;
+        
+        [SerializeField]
+        private PlayerInstanceService _instanceService;
 
         protected void Start() {
             _scoreManager = Container.Resolve<IScoreManager>();
@@ -62,6 +65,12 @@ namespace Scr.GameManager {
                 builder
                     .RegisterComponent(audioSource)
                     .As<AudioSource>();
+            }
+
+            if (_instanceService is not null) {
+                builder
+                    .RegisterInstance(_instanceService)
+                    .As<IPlayerInstanceService>();
             }
         }
     }

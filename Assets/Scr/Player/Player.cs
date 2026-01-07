@@ -2,6 +2,7 @@ using MessagePipe;
 using Scr.Player.Action;
 using Scr.Utility;
 using Sirenix.OdinInspector;
+using Unity.Cinemachine;
 using UnityEngine;
 using VContainer;
 
@@ -29,6 +30,11 @@ namespace Scr.Player {
 
         private void Start() {
             _damagePublisher = _resolver.Resolve<IPublisher<TakeDamageEventBus>>();
+
+            var cam = FindAnyObjectByType<CinemachineCamera>();
+            if (cam is not null) {
+                cam.Follow = transform;
+            }
         }
 
         private void OnCollisionEnter(Collision other) {

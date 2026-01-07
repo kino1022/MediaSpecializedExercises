@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7633670141550964565}
-  - component: {fileID: 3389045387325327339}
   - component: {fileID: 6480883210004276084}
   - component: {fileID: 1107746831452425062}
   - component: {fileID: 2943933397521626556}
@@ -36,81 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6433481994838436642}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3389045387325327339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4088433261151143847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85eaa62eb7e7448a8f06b2d74041c33d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: RinaInput::RinaInput.Controller.ControllerMonoBehaviour
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 8098aec7ee4eb41f48b7576d490c517f, type: 2}
-    - {fileID: 11400000, guid: 009a236263ab94a6f83cd191c51b99ed, type: 2}
-    - {fileID: 11400000, guid: f3260688ecdcd4ba3b3beda68c560a93, type: 2}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: m_buttonModules
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[RinaInput.Controller.Module.IInputModule`1[[System.Single,
-        mscorlib]], RinaInput]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_leverModules
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[RinaInput.Controller.Module.IInputModule`1[[UnityEngine.Vector2,
-        UnityEngine.CoreModule]], RinaInput]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_commands
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[RinaInput.Controller.Command.IInputCommand,
-        RinaInput]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_streamProvider
-      Entry: 6
-      Data: 
 --- !u!114 &6480883210004276084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,12 +199,24 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.98232
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.98232
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.98232
+      objectReference: {fileID: 0}
+    - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.58
+      value: -3.53
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 856741247928526391, guid: 0a0548c63ace244bca381603f2fb4ae6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -483,6 +419,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 6480883210004276084}
+    - {fileID: -944628639613478452, guid: c5b0ee17949064200914845f39637823, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -494,10 +431,19 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 7
+      Data: 1|RinaInput.Installer.RinaInputInstaller, RinaInput
+    - Name: m_actionsMap
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

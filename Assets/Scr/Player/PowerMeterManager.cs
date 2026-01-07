@@ -51,9 +51,19 @@ namespace Scr.Player {
 
         private void Start() {
             //各種コンポーネントの取得処理(エディタでアタッチする際は不要)
+            
+            // PlayerのLifetimeScopeから取得（ローカルなコンポーネント）
+            var playerScope = gameObject.GetComponentInParent<VContainer.Unity.LifetimeScope>();
+            if (playerScope != null) {
+                _grounded = playerScope.Container.Resolve<IGroundedManger>();
+                _rigidbody = playerScope.Container.Resolve<Rigidbody>();
+            }
+            else {
+                Debug.LogError($"[PowerMeterManager] PlayerのLifetimeScopeが見つかりません");
+            }
+            
+            // IMoveActionはPlayerActionBehaviourなので、同じGameObject階層から取得
             _moveAction = _resolver.Resolve<IMoveAction>();
-            _grounded = _resolver.Resolve<IGroundedManger>();
-            _rigidbody = _resolver.Resolve<Rigidbody>();
         }
 
         private void FixedUpdate() {
